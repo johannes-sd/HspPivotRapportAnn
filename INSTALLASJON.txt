@@ -15,6 +15,44 @@ Filene som må kopieres til prosjektmappen er:
 - .gitignore
 - interneData + alle filene i mappen (dbconfig, hspRapport, mailOptions, transportOptions)
 
+Eksempler:
+dbconfig:
+    module.exports = dboptions =  {
+        userName: "username",
+        password: "password",
+        server: "db-adress" //,
+    }
+
+hspRapport:
+    module.exports = function sqltext(startdato, sluttdato) {
+        var rappDatoStartFormatert = startdato;
+        var rappDatoSluttFormatert = sluttdato;
+        return `
+            select data from table etc etc`;
+            };
+mailoptions:
+    module.exports = mailOptions = {
+        from: '<fromadress@domain.com>',
+        to: 'toadress@domain.com',
+        bcc: 'a bcc mailadress if wanted',
+        subject : 'Your subject',
+        text: 'Your textual content',
+        html: ""
+    };
+transportOptions:
+    module.exports = transportOptions = {
+            //host: 'send.one.com',
+            host: 'smtphost',
+            auth: {
+                user: 'user',
+                pass : 'password'
+            },
+            secure: false,
+            tls: {rejectUnauthorized: false},
+            debug: true
+    }
+
+
 Naviger inn i prosjektmappen og kjør kommandoene
 - npm init -y
 - npm i
