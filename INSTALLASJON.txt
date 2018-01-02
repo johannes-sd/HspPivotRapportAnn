@@ -1,0 +1,28 @@
+Dette er et node.js-prosjekt.
+Best practice mappeoppsett: En root-mappe som heter node, med prosjektene i egne undermapper.
+
+Prerequisite (Hva må være på maskinen):
+- Node (Gjerne LTS-versjon som feks. 8) https://nodejs.org/en/download/
+
+Installasjon:
+Filene som må kopieres til prosjektmappen er:
+- spoerringForsendelsesMaaterHSP.js
+- sendMailForsendelsesMaaterHSP.js
+- package.json
+- package-lock.json
+- htmlSTART.html
+- htmlSLUTT.html
+- .gitignore
+- interneData + alle filene i mappen (dbconfig, hspRapport, mailOptions, transportOptions)
+
+Naviger inn i prosjektmappen og kjør kommandoene
+- npm init -y
+- npm i
+
+Konfigurasjon
+- Innlogginger, spørringer og statisk informasjon ligger i filene i interneData-mappen
+
+Kjøring av rapport:
+Naviger inn i prosjektmappen og kjør kommandoen
+- node sendMailForsendelsesMaaterHSP
+
