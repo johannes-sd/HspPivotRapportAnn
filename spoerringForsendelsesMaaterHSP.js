@@ -170,6 +170,7 @@ function queryDatabase(){
 
 
         objektnokler.forEach((enkeltnokkel) => {
+            htmltabell+="\t<tr>";
             htmltabell+="\t\t<td>";
             htmltabell+=enkeltnokkel;
             htmltabell+='</td>' + "\n";
